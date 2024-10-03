@@ -1,10 +1,10 @@
 import './App.css';
-import Header from './components/Header';
-import MainContent from './components/MainContent';
-import Servicios from './components/Servicios';
-import Pasos from './components/Pasos';
-import Sistemas from './components/Sistemas';
-import Contacto from './components/Contacto';
+import Header from './components/solar/Header';
+import MainContent from './components/solar/MainContent';
+import Servicios from './components/solar/Servicios';
+import Pasos from './components/solar/Pasos';
+import Sistemas from './components/solar/Sistemas';
+import Contacto from './components/solar/Contacto';
 
 function App() {
   return (
