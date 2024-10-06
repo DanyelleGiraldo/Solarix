@@ -10,6 +10,7 @@ function App() {
       <Header /> 
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/solarix" element={<LandingPage />} />
         <Route path="/paneles" element={<Paneles />} />
       </Routes>
     </Router>

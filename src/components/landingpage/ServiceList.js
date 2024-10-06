@@ -6,20 +6,20 @@ export default function ServiceList({ selectedService, setSelectedService }) {
     <section id="servicios" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Nuestros Servicios</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 justify-center">
           {services.map((service) => (
             <button
               key={service.id}
-              className="h-auto py-4 flex flex-col items-center justify-center text-center hover:bg-green-50 transition-colors duration-300 border border-gray-200 rounded-lg"
+              className="h-auto py-6 flex flex-col items-center justify-center text-center hover:bg-green-50 transition-colors duration-300 border border-gray-200 rounded-lg"
               onClick={() => setSelectedService(service)}
             >
-              <span className="w-8 h-8 mb-2 text-green-600">{service.icon}</span>
-              <span className="text-sm">{service.title}</span>
+              <img src={service.icon} className="w-12 h-12 mb-4 text-green-600" alt={service.title}></img>
+              <span className="text-base font-semibold">{service.title}</span>
             </button>
           ))}
         </div>
         {selectedService && (
-          <div className="mt-8 bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="mt-12 bg-white rounded-lg shadow-md overflow-hidden">
             <div className="relative">
               <button
                 className="absolute top-2 right-2 z-10 p-2 bg-white rounded-full shadow-md"
@@ -37,7 +37,7 @@ export default function ServiceList({ selectedService, setSelectedService }) {
                     <p className="text-gray-600">{selectedService.description}</p>
                   </div>
                   <a
-                    href={`/servicios/${selectedService.id}`}
+                    href={`/${selectedService.id}`}
                     className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors duration-200"
                   >
                     Ver más
