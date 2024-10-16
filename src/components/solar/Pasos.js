@@ -1,25 +1,9 @@
+// Pasos.js
 import React, { useState } from 'react';
+import pasos from './contenido/PasosDataSolar';  
+import pasosTexts from './contenido/PasosDataTextSolar'; 
 
 const Pasos = () => {
-  const pasos = [
-    { 
-      titulo: 'Visita de inspección', 
-      descripcion: 'Realizamos una visita técnica para inspeccionar el lugar donde se implementará el sistema y analizar las necesidades energéticas y de infraestructura.' 
-    },
-    { 
-      titulo: 'Diseño de sistema fotovoltaico', 
-      descripcion: 'Diseñamos un sistema fotovoltaico a medida, ajustado a las necesidades de tu proyecto, cumpliendo con los estándares RETIE y RETILAP.' 
-    },
-    { 
-      titulo: 'Instalación y conexión', 
-      descripcion: 'Llevamos a cabo la instalación completa del sistema fotovoltaico, desde la conexión eléctrica hasta la puesta en marcha, cumpliendo con las normativas de seguridad.' 
-    },
-    { 
-      titulo: 'Mantenimiento y soporte técnico', 
-      descripcion: 'Ofrecemos servicios de mantenimiento preventivo y correctivo, asegurando el funcionamiento óptimo del sistema a lo largo del tiempo.' 
-    }
-  ];
-
   const [descripcionVisible, setDescripcionVisible] = useState(null);
 
   const handleStepClick = (index) => {
@@ -29,7 +13,7 @@ const Pasos = () => {
   return (
     <div className="bg-white py-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-green-800 mb-4 text-center">PASOS DEL PROYECTO</h2>
+        <h2 className="text-3xl font-bold text-green-800 mb-4 text-center">{pasosTexts.titulo}</h2> 
         <div className="relative">
           {pasos.map((step, index) => (
             <div key={index} className="mb-4">

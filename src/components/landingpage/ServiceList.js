@@ -1,5 +1,5 @@
 import React from 'react'
-import services from './services'
+import services from './contenido/services'
 
 export default function ServiceList({ selectedService, setSelectedService }) {
   return (

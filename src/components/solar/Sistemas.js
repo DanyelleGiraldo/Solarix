@@ -1,32 +1,10 @@
 import React, { useState } from 'react';
+import sistemasData from './contenido/SistemasDataSolar'; 
+import sistemasTexts from './contenido/SistemasTextSolar'; 
 
 const Sistemas = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedSystem, setSelectedSystem] = useState(null);
-
-  const sistemas = [
-    { 
-      nombre: 'ON GRID', 
-      descripcion: 'Sistemas conectados a la red eléctrica, permiten el intercambio de energía con la compañía eléctrica.',
-      video: 'https://www.youtube.com/embed/tsNbXJojVOE'
-    },
-    { 
-      nombre: 'OFF GRID', 
-      descripcion: 'Sistemas independientes que funcionan sin conexión a la red eléctrica, ideales para zonas remotas.',
-      video: 'https://www.youtube.com/embed/lBlGuo86f7I' 
-    },
-    { 
-      nombre: 'HÍBRIDO', 
-      descripcion: 'Sistemas que combinan energía solar con otras fuentes, proporcionando mayor flexibilidad y seguridad en el suministro.',
-      video: 'https://www.youtube.com/embed/tsNbXJojVOE'
-    },
-    { 
-      nombre: 'BOMBEO DIRECTO', 
-      descripcion: 'Sistemas diseñados para bombear agua directamente con energía solar, perfectos para riego y abastecimiento.',
-      video: 'https://www.youtube.com/embed/VIDEO_ID_3'
-    }
-    
-  ];
 
   const handleOpenModal = (system) => {
     setSelectedSystem(system);
@@ -43,17 +21,16 @@ const Sistemas = () => {
       <div className="absolute top-0 left-0 w-32 h-32 bg-green-300 transform -rotate-45"></div>
       <div className="absolute bottom-0 right-0 w-32 h-32 bg-green-300 transform -rotate-45"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-3xl font-bold text-green-800 mb-4 text-center">SISTEMAS SOLARES</h2>
-        <p className="text-green-800 mb-8 text-center">Tenemos un sistema para cada necesidad que requieras.</p>
+        <h2 className="text-3xl font-bold text-green-800 mb-4 text-center">{sistemasTexts.titulo}</h2>
+        <p className="text-green-800 mb-8 text-center">{sistemasTexts.descripcion}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {sistemas.map((system, index) => (
+          {sistemasData.map((system, index) => (
             <div key={index} className="bg-green-700 text-white rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105 cursor-pointer" onClick={() => handleOpenModal(system)}>
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 bg-green-800 rounded-full flex items-center justify-center mb-2">
                   <img src={`/icons/${system.nombre.toLowerCase().replace(' ', '-')}.svg`} alt={system.nombre} className="w-10 h-10" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{system.nombre}</h3>
-                <p className="text-gray-200 text-center">{system.descripcion}</p>
               </div>
             </div>
           ))}
