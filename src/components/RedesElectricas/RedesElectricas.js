@@ -5,14 +5,14 @@ import Servicios from '../Components/Servicios';
 import Pasos from '../Components/Pasos';
 import Sistemas from '../Components/Sistemas';
 import Contacto from '../Components/Contacto';
-import contentData from './contenido/MainContentSolar';
-import pasosData from './contenido/PasosDataSolar';
-import pasosTexts from './contenido/PasosDataTextSolar';
-import servicesData from './contenido/ServicesDataSolar';
-import sistemasData from './contenido/SistemasDataSolar'; 
-import sistemasTexts from './contenido/SistemasTextSolar'; 
+import contentData from './contenido/MainContentRed';
+import pasosData from './contenido/PasosDataRed';
+import pasosTexts from './contenido/PasosTextsRed';
+import servicesData from './contenido/ServicesDataRed';
+import sistemasData from './contenido/SistemasDataRed'; 
+import sistemasTexts from './contenido/SistemasTextRed';
 
-function Solar() {
+function RedesElectricas() {
   return (
     <div className="font-sans">
       <Header />
@@ -27,4 +27,4 @@ function Solar() {
   );
 }
 
-export default Solar;
+export default RedesElectricas;

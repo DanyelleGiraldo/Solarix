@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Servicios = [
-  { name: "Paneles Solares", href: "/paneles" },
-  { name: "Cámaras de Seguridad", href: "/camaras" },
-  { name: "Redes de Comunicación", href: "/comunicaciones" },
-  { name: "Sistemas de Vigilancia", href: "/vigilancia" }
+  { name: "Energía Solar", href: "/paneles" },
+  { name: "Redes Eléctricas", href: "/RedesElectricas" },
+  { name: "Movilidad Eléctrica", href: "/MovilidadElectrica" },
+  { name: "Redes de Comunicación", href: "/Comunicacion" },
+  { name: "Sistemas de Vigilancia", href: "/Vigilancia" },
+  { name: "Sistemas de Alarmas", href: "/Alarmas" }
 ];
+
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,7 +25,7 @@ const Header = () => {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-    setIsServicesOpen(false); // Cierra el menú de servicios al cerrar el menú móvil
+    setIsServicesOpen(false);
   };
 
   return (

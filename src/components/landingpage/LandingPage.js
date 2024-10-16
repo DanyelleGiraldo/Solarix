@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Header from '../solar/Header'
+import Header from '../Components/Header'
 import Hero from './Hero'
 import ServiceList from './ServiceList'
 import WhyChooseUs from './WhyChooseUs'
-import ContactSection from '../solar/Contacto'
+import ContactSection from '../Components/Contacto'
 
 export default function LandingPage() {
   const [selectedService, setSelectedService] = useState(null)
