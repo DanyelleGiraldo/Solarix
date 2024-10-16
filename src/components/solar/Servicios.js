@@ -3,9 +3,8 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import servicesData from './contenido/ServicesDataSolar'; 
 
-const Servicios = () => {
+const Servicios = ({ servicesData }) => {
   const [servicioSeleccionado, setServicioSeleccionado] = useState(null);
 
   const settings = {

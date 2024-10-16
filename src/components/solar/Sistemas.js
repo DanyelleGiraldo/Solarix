@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import sistemasData from './contenido/SistemasDataSolar'; 
-import sistemasTexts from './contenido/SistemasTextSolar'; 
 
-const Sistemas = () => {
+const Sistemas = ({ sistemasData, sistemasTexts }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedSystem, setSelectedSystem] = useState(null);
 

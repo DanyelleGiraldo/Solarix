@@ -1,9 +1,7 @@
 // Pasos.js
 import React, { useState } from 'react';
-import pasos from './contenido/PasosDataSolar';  
-import pasosTexts from './contenido/PasosDataTextSolar'; 
 
-const Pasos = () => {
+const Pasos = ({ pasos, pasosTexts }) => {
   const [descripcionVisible, setDescripcionVisible] = useState(null);
 
   const handleStepClick = (index) => {
@@ -13,7 +11,7 @@ const Pasos = () => {
   return (
     <div className="bg-white py-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-green-800 mb-4 text-center">{pasosTexts.titulo}</h2> 
+        <h2 className="text-3xl font-bold text-green-800 mb-4 text-center">{pasosTexts.titulo}</h2>
         <div className="relative">
           {pasos.map((step, index) => (
             <div key={index} className="mb-4">
@@ -24,7 +22,7 @@ const Pasos = () => {
                 <div className="bg-green-800 text-white p-4 rounded-full flex-grow flex items-center">
                   <span>{step.titulo}</span>
                   <svg
-                    className={`w-6 h-6 ml-auto transition-transform duration-300  ${descripcionVisible === index ? 'transform rotate-90' : ''}`}
+                    className={`w-6 h-6 ml-auto transition-transform duration-300 ${descripcionVisible === index ? 'transform rotate-90' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -34,9 +32,7 @@ const Pasos = () => {
                   </svg>
                 </div>
               </div>
-              <div
-                className={`overflow-hidden transition-all duration-500 ${descripcionVisible === index ? 'max-h-40' : 'max-h-0'}`}
-              >
+              <div className={`overflow-hidden transition-all duration-500 ${descripcionVisible === index ? 'max-h-40' : 'max-h-0'}`}>
                 <div className="bg-green-500 text-white p-4 mt-2 ml-16 rounded-full ">
                   <p>{step.descripcion}</p>
                 </div>
