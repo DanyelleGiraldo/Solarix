@@ -5,6 +5,7 @@ import Paneles from './components/solar/Paneles';
 import RedesElectricas from './components/RedesElectricas/RedesElectricas';
 import LandingPage from './components/landingpage/LandingPage';
 import MovilidadElectrica from './components/MovilidadElectrica/MovilidadElectrica';
+import RedesComunicacion from './components/RedesComunicacion/RedesComunicacion';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/paneles" element={<Paneles />} />
         <Route path="/RedesElectricas" element={<RedesElectricas />} />
         <Route path="/MovilidadElectrica" element={<MovilidadElectrica />} />
+        <Route path="/Comunicacion" element={<RedesComunicacion />} />
 
       </Routes>
     </Router>
