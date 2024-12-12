@@ -6,7 +6,7 @@ export default function ServiceList({ selectedService, setSelectedService }) {
     <section id="servicios" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Nuestros Servicios</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2  gap-8 ">
           {services.map((service) => (
             <button
               key={service.id}
