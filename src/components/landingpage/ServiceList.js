@@ -4,7 +4,7 @@ import services from './contenido/services'
 export default function ServiceList({ selectedService, setSelectedService }) {
   return (
     <section id="servicios" className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto" >
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Nuestros Servicios</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2  gap-8 ">
           {services.map((service) => (
